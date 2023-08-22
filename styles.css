@@ -41,14 +41,14 @@ h1 {
 
 .question h3 {
     margin-top: 0;
-    font-size: 18px;
+    font-size: 15px;
     color: #333;
 }
 
 .answer {
     margin-top: 10px;
     color: #666;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 /* Media query para dispositivos com largura menor que 600px */
