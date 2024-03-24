@@ -1,75 +1,131 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
 }
 
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f0f4f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .faq {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .question {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: background-color 0.3s, transform 0.2s;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .question:hover {
-    background-color: #f9f9f9;
-    transform: translateY(-2px);
+  background-color: #f9f9f9;
+  transform: translateY(-2px);
 }
 
 .question h3 {
-    margin-top: 0;
-    font-size: 15px;
-    color: #333;
+  margin-top: 0;
+  font-size: 15px;
+  color: #333;
 }
 
 .answer {
-    margin-top: 10px;
-    color: #666;
-    font-size: 15px;
+  margin-top: 10px;
+  color: #666;
+  font-size: 15px;
 }
 
 /* Media query para dispositivos com largura menor que 600px */
 @media screen and (max-width: 600px) {
-    .container {
-        padding: 20px;
-    }
+  .container {
+    padding: 20px;
+  }
 
-    .question {
-        padding: 15px;
-    }
+  .question {
+    padding: 15px;
+  }
 }
 
 .footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #f5f5f5;
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f5f5f5;
 }
 
 .profile-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+section {
+  background-color: #f0f4f9;
+  padding: 20px 0;
+}
+.sec-top {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.sec-top h1 {
+  color: #1c1e22;
+  font-size: 35px;
+}
+.sec-top h1 span {
+  color: #ffaa17;
+}
+.contato-content {
+  text-align: center;
+  margin-top: 20px;
+}
+.btn {
+  font-size: 18px;
+  padding: 15px 30px;
+  color: #1c1e22;
+  font-weight: 500;
+  background-color: #ffaa17;
+  border-radius: 10px;
+  border: 1px solid #ffaa17;
+  margin: 11px;
+  font-weight: bold;
+}
+.btn:hover {
+  color: #ffaa17;
+  background: #fff;
+}
+footer {
+  background-color: #f0f4f9;
+  padding: 20px 0;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons a {
+  margin: 0 10px;
+  color: #333;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .contato-content {
+    margin-top: 15px;
+    max-width: 100%;
+  }
 }
