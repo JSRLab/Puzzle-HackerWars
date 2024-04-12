@@ -14,6 +14,24 @@ body {
   border-radius: 10px;
 }
 
+#searchInput {
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+
+
+#searchInput:focus {
+  outline: none;
+  border-color: #ffaa17;
+}
+
 h1 {
   text-align: center;
   color: #333;
@@ -127,5 +145,15 @@ footer {
   .contato-content {
     margin-top: 15px;
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #searchInput {
+    margin-bottom: 15px;
+  }
+
+  .question {
+    padding: 15px;
   }
 }

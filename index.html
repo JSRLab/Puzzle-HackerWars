@@ -14,16 +14,12 @@
   </head>
 
   <body>
-    <footer class="footer">
-      <a href="https://github.com/jalisonsousa">
-        <img class="profile-image"
-          src="https://jalisonbr.com/img/jalisonbrLogo.jpg" alt="JalisonBR">
-      </a>
-    </footer>
+    
     <div class="container">
       <h1>Puzzle e Respostas Hacker Wars</h1>
+      
       <div class="faq">
-        
+        <center><input type="text" id="searchInput" onkeyup="searchQuestions()" placeholder="Pesquisar perguntas..."></center>
         <div class="question">
           <h3>
             1) Puzzle: jogo da velha, e facil</h3><br>
@@ -462,5 +458,29 @@
         </div>
       </footer>
     </div>
+    <script>
+      function searchQuestions() {
+        var input, filter, questions, question, answer, txtValue;
+        input = document.getElementById('searchInput');
+        filter = input.value.toLowerCase(); // Convertendo para minúsculas para ignorar diferenças de caixa
+        questions = document.getElementsByClassName('question');
+      
+        for (var i = 0; i < questions.length; i++) {
+          question = questions[i].getElementsByTagName('h3')[0];
+          answer = questions[i].getElementsByTagName('p')[0];
+          txtValue = question.textContent || question.innerText;
+          txtValue += answer.textContent || answer.innerText; // Adiciona o texto da resposta também
+          txtValue = txtValue.toLowerCase(); // Convertendo para minúsculas para ignorar diferenças de caixa
+          // Removendo acentos usando normalize e expressão regular
+          txtValue = txtValue.normalize('NFD').replace(/[\u0300-\u036f]/g, ''); 
+      
+          if (txtValue.indexOf(filter) > -1) {
+            questions[i].style.display = '';
+          } else {
+            questions[i].style.display = 'none';
+          }
+        }
+      }
+      </script>
   </body>
 </html>
