@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function applyTranslations(language) {
-    fetch(`locales/${language}.json`)
+    fetch(`localidade/${language}.json`)
         .then(response => response.json())
         .then(translations => {
             document.title = translations.title;
@@ -34,7 +34,7 @@ function applyTranslations(language) {
 }
 
 function loadFAQ(language) {
-    fetch(`locales/data-${language}.json`)
+    fetch(`localidade/data-${language}.json`)
         .then(response => response.json())
         .then(data => {
             const faqContainer = document.getElementById('faq');
