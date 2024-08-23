@@ -1,159 +1,162 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
+    background-color: #000; /* Fundo preto para o tema hacker */
+    color: #00ff00; /* Texto verde para o tema hacker */
+    font-family: 'Courier New', Courier, monospace; /* Fonte estilo terminal */
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px;
-  background-color: #f0f4f9;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+    position: relative; /* Necessário para o posicionamento dos ícones */
 }
 
-#searchInput {
-  margin: auto;
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: background-color 0.3s, transform 0.2s;
+.header {
+    position: relative;
+    margin-bottom: 20px;
 }
 
-
-
-#searchInput:focus {
-  outline: none;
-  border-color: #ffaa17;
+.header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-h1 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 20px;
+/* Contêiner dos ícones de redes sociais */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    flex-wrap: wrap; /* Permite que os ícones se movam para a linha seguinte em telas menores */
+    gap: 10px; /* Espaço entre os ícones */
+    margin-top: 20px; /* Espaço acima dos ícones */
+}
+
+/* Estilo dos ícones de redes sociais */
+.social-icons a {
+    color: #00ff00; /* Cor dos ícones */
+    font-size: 24px; /* Tamanho dos ícones */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    transition: color 0.3s, transform 0.3s; /* Adiciona efeito de transição suave */
+}
+
+/* Efeito de hover para os ícones */
+.social-icons a:hover {
+    color: #00cc00; /* Cor dos ícones ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho dos ícones ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .social-icons a {
+        font-size: 20px; /* Reduz o tamanho dos ícones em telas menores */
+    }
+}
+
+@media (max-width: 400px) {
+    .social-icons a {
+        font-size: 18px; /* Reduz ainda mais o tamanho dos ícones em telas muito pequenas */
+    }
 }
 
 .faq {
-  margin-top: 30px;
+    margin-top: 20px;
 }
 
-.question {
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  transition: background-color 0.3s, transform 0.2s;
+.language-selector {
+    display: flex;
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    gap: 10px; /* Espaço entre os ícones */
+    margin-top: 20px; /* Espaço acima do seletor */
 }
 
-.question:hover {
-  background-color: #f9f9f9;
-  transform: translateY(-2px);
+.language-selector a {
+    display: block;
+    width: 30px; /* Largura dos ícones */
+    height: 32px; /* Altura dos ícones */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites */
+    transition: transform 0.3s, border-color 0.3s; /* Adiciona efeitos de transição suaves */
 }
 
-.question h3 {
-  margin-top: 0;
-  font-size: 15px;
-  color: #333;
+.language-selector a img {
+    width: 100%; /* Ajusta a largura da imagem ao tamanho do link */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
-.answer {
-  margin-top: 10px;
-  color: #313131;
-  font-size: 15px;
+.language-selector a:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do ícone ao passar o mouse */
+    border-color: #00cc00; /* Altera a cor da borda ao passar o mouse */
 }
 
-/* Media query para dispositivos com largura menor que 600px */
-@media screen and (max-width: 600px) {
-  .container {
-    padding: 20px;
-  }
+.puzzle-title {
+    color: #FF0000; /* Cor vermelha como exemplo */
+    font-weight: bold; /* Negrito para destacar */
+}
 
-  .question {
+.pergunta {
+    background-color: #111; /* Fundo escuro para contraste */
     padding: 15px;
-  }
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #00ff00;
+    text-align: left;
+    transition: background-color 0.3s, border-color 0.3s; /* Transição suave para os efeitos de hover */
 }
 
-.footer {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #f5f5f5;
+/* Efeito de hover para as perguntas */
+.pergunta:hover {
+    background-color: #222; /* Fundo um pouco mais claro ao passar o mouse */
+    border-color: #00cc00; /* Cor da borda um pouco mais clara ao passar o mouse */
 }
 
-.profile-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
+.pergunta h3 {
+    margin: 0;
 }
-section {
-  background-color: #f0f4f9;
-  padding: 20px 0;
+
+.resposta {
+    margin-top: 10px;
+    padding-left: 20px;
 }
-.sec-top {
-  text-align: center;
-  margin-bottom: 10px;
+
+#searchInput {
+    padding: 10px;
+    margin: 25px 0;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    background-color: #111; /* Fundo escuro */
+    color: #00ff00; /* Texto verde */
+    font-family: 'Courier New', Courier, monospace;
 }
-.sec-top h1 {
-  color: #1c1e22;
-  font-size: 35px;
-}
-.sec-top h1 span {
-  color: #ffaa17;
-}
-.contato-content {
-  text-align: center;
-  margin-top: 20px;
-}
-.btn {
-  font-size: 18px;
-  padding: 15px 30px;
-  color: #1c1e22;
-  font-weight: 500;
-  background-color: #ffaa17;
-  border-radius: 10px;
-  border: 1px solid #ffaa17;
-  margin: 11px;
-  font-weight: bold;
-}
-.btn:hover {
-  color: #ffaa17;
-  background: #fff;
-}
+
 footer {
-  background-color: #f0f4f9;
-  padding: 20px 0;
-}
-.social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.social-icons a {
-  margin: 0 10px;
-  color: #333;
-  font-size: 24px;
-  text-decoration: none;
+    background-color: #111; /* Fundo escuro para o rodapé */
+    color: #00ff00; /* Texto verde */
+    padding: 30px 0; /* Aumenta o padding para adicionar mais espaço */
+    text-align: center;
+    border-top: 1px solid #00ff00;
+    margin-top: 40px;
 }
 
-@media screen and (max-width: 768px) {
-  .contato-content {
-    margin-top: 15px;
-    max-width: 100%;
-  }
+/* Responsividade do rodapé */
+footer p {
+    margin: 20px 0; /* Adiciona mais espaço entre os elementos do rodapé */
+    word-break: break-word; /* Quebra palavras longas */
+    overflow-wrap: break-word; /* Quebra palavras longas e evita que o texto ultrapasse o contêiner */
 }
 
-@media screen and (max-width: 600px) {
-  #searchInput {
-    margin-bottom: 15px;
-  }
-
-  .question {
-    padding: 15px;
-  }
+.contact-button {
+    color: #00ff00;
+    background-color: #222; /* Fundo escuro para o botão */
+    border: 1px solid #00ff00;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px; /* Adiciona margem superior para espaço entre o texto e o botão */
 }
+
+.contact-button:hover {
+    background-color: #00ff00; /* Fundo verde ao passar o mouse */
+    color: #111; /* Texto escuro ao passar o mouse */
+}
+
