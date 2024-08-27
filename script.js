@@ -1,6 +1,7 @@
+// Função principal que é executada quando o conteúdo da página é totalmente carregado
 document.addEventListener('DOMContentLoaded', function() {
     // Detecta o idioma do navegador
-    const userLanguage = (navigator.language || navigator.userLanguage).substring(0, 2); // Pega os primeiros 2 caracteres (ex: 'en', 'pt')
+    const userLanguage = (navigator.language || navigator.userLanguage).substring(0, 2); // Obtém os primeiros 2 caracteres do idioma (ex: 'en', 'pt')
     
     // Define o idioma padrão se o idioma do navegador não for suportado
     const supportedLanguages = ['en', 'pt'];
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Função para aplicar traduções ao conteúdo da página
 function applyTranslations(language) {
     fetch(`localidade/${language}.json`)
         .then(response => response.json())
@@ -33,6 +35,7 @@ function applyTranslations(language) {
         .catch(error => console.error('Erro ao carregar traduções:', error));
 }
 
+// Função para carregar e exibir as perguntas e respostas
 function loadFAQ(language) {
     fetch(`localidade/data-${language}.json`)
         .then(response => response.json())
@@ -52,7 +55,14 @@ function loadFAQ(language) {
         .catch(error => console.error('Erro ao carregar dados de FAQ:', error));
 }
 
-// Função para pesquisar perguntas
+// Função para alterar o idioma da página
+function changeLanguage(lang) {
+    localStorage.setItem('language', lang);
+    applyTranslations(lang);
+    loadFAQ(lang);
+}
+
+// Função para pesquisar perguntas no FAQ
 function searchperguntas() {
     const input = normalizeString(document.getElementById('searchInput').value.toLowerCase());
     const perguntas = document.querySelectorAll('.pergunta');
@@ -69,14 +79,7 @@ function searchperguntas() {
     });
 }
 
+// Função para remover acentos e caracteres especiais de uma string
 function normalizeString(str) {
-    // Remove acentos e caracteres especiais
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-}
-
-// Função para alterar o idioma
-function changeLanguage(lang) {
-    localStorage.setItem('language', lang);
-    applyTranslations(lang);
-    loadFAQ(lang);
 }
