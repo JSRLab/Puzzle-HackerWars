@@ -7,8 +7,9 @@ body {
 }
 
 .container {
-    width: 80%;
-    margin: 50px auto;
+    width: 90%; /* Aumenta a largura do container em telas menores */
+    max-width: 1200px; /* Limita a largura máxima do container */
+    margin: 20px auto;
     text-align: center;
     position: relative; /* Necessário para o posicionamento dos ícones */
 }
@@ -21,6 +22,7 @@ body {
 .header h1 {
     font-size: 2em;
     margin-bottom: 10px;
+    word-wrap: break-word; /* Quebra o texto longo */
 }
 
 /* Contêiner dos ícones de redes sociais */
@@ -51,11 +53,17 @@ body {
     .social-icons a {
         font-size: 20px; /* Reduz o tamanho dos ícones em telas menores */
     }
+    .header h1 {
+        font-size: 1.5em; /* Reduz o tamanho do título em telas menores */
+    }
 }
 
 @media (max-width: 400px) {
     .social-icons a {
         font-size: 18px; /* Reduz ainda mais o tamanho dos ícones em telas muito pequenas */
+    }
+    .header h1 {
+        font-size: 1.2em; /* Reduz ainda mais o tamanho do título */
     }
 }
 
@@ -88,11 +96,6 @@ body {
     border-color: #00cc00; /* Altera a cor da borda ao passar o mouse */
 }
 
-.puzzle-title {
-    color: #FF0000; /* Cor vermelha como exemplo */
-    font-weight: bold; /* Negrito para destacar */
-}
-
 .pergunta {
     background-color: #111; /* Fundo escuro para contraste */
     padding: 15px;
@@ -101,21 +104,18 @@ body {
     border: 1px solid #00ff00;
     text-align: left;
     transition: background-color 0.3s, border-color 0.3s; /* Transição suave para os efeitos de hover */
-}
-
-/* Efeito de hover para as perguntas */
-.pergunta:hover {
-    background-color: #222; /* Fundo um pouco mais claro ao passar o mouse */
-    border-color: #00cc00; /* Cor da borda um pouco mais clara ao passar o mouse */
+    word-wrap: break-word; /* Quebra o texto longo */
 }
 
 .pergunta h3 {
     margin: 0;
+    font-size: 1.5em; /* Ajusta o tamanho da fonte das perguntas */
 }
 
 .resposta {
     margin-top: 10px;
     padding-left: 20px;
+    font-size: 1em; /* Ajusta o tamanho da fonte das respostas */
 }
 
 #searchInput {
@@ -126,6 +126,9 @@ body {
     background-color: #111; /* Fundo escuro */
     color: #00ff00; /* Texto verde */
     font-family: 'Courier New', Courier, monospace;
+    width: 100%; /* Ocupa toda a largura do container em telas menores */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+    text-align: center;
 }
 
 footer {
@@ -153,6 +156,7 @@ footer p {
     text-decoration: none;
     font-weight: bold;
     margin-top: 10px; /* Adiciona margem superior para espaço entre o texto e o botão */
+    display: inline-block;
 }
 
 .contact-button:hover {
@@ -160,3 +164,58 @@ footer p {
     color: #111; /* Texto escuro ao passar o mouse */
 }
 
+/* Adicionando responsividade para que o texto se ajuste melhor */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Ajusta a largura do container em telas menores */
+    }
+
+    .pergunta h3 {
+        font-size: 1.0em; /* Reduz o tamanho da fonte das perguntas em telas menores */
+    }
+
+    .resposta {
+        font-size: 0.9em; /* Reduz o tamanho da fonte das respostas em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%; /* Ocupa toda a largura da tela em dispositivos móveis */
+    }
+
+    .header h1 {
+        font-size: 1.3em; /* Ajusta o tamanho do título para telas pequenas */
+    }
+
+    .pergunta h3 {
+        font-size: 1.0em; /* Reduz o tamanho da fonte das perguntas para telas pequenas */
+    }
+
+    .resposta {
+        font-size: 0.8em; /* Ajusta o tamanho da fonte das respostas para telas pequenas */
+    }
+
+    #searchInput {
+        font-size: 0.9em; /* Ajusta o tamanho da fonte do campo de busca */
+    }
+}
+
+/* Ajuste para telas maiores */
+@media (min-width: 1024px) {
+    .header h1 {
+        font-size: 1.8em; /* Reduz o tamanho do título em telas maiores */
+    }
+
+    .pergunta h3 {
+        font-size: 1.0em; /* Reduz o tamanho da fonte das perguntas em telas maiores */
+    }
+
+    .resposta {
+        font-size: 0.9em; /* Reduz o tamanho da fonte das respostas em telas maiores */
+    }
+
+    #searchInput {
+        font-size: 0.9em; /* Reduz o tamanho da fonte do campo de busca em telas maiores */
+    }
+}
