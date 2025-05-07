@@ -1,49 +1,151 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perguntas / Respostas Hacker Wars</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <meta name="description" content="Puzzle e resposta do hacker wars">
-    <meta name="keywords" content="hacker wars, enigmas hacker wars, puzzle hacker wars">
-    <link rel="icon" href="icone.png" type="image/icon type" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2603912794242628"
-     crossorigin="anonymous"></script>
-</head>
 
-<body>
-    <div class="container">
-        <div class="header">
-            <h1 id="pageTitle">Perguntas / Respostas Hacker Wars</h1>
-            <div class="social-icons">
-                <a href="https://hackerwars.io/" target="_blank" title="Website"><i class="fa-solid fa-globe"></i></a>
-                <a href="https://jalisonbr.com/" target="_blank" title="Website"><i class="fa-solid fa-globe"></i></a>
-                <a href="https://www.youtube.com/@JalisonBR" target="_blank" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://instagram.com/jalison_sousa1" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/jalisonsousa" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Soluções para puzzles do Hacker Wars. Respostas organizadas para facilitar o progresso no jogo."
+    />
+    <meta
+      name="keywords"
+      content="hacker wars, puzzle, respostas, soluções, jogo, ajuda, enigmas hacker wars, puzzle hacker war"
+    />
+    <meta name="author" content="Jalisonsousa" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Portuguese" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="imagens/icone.png" type="image/png" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styles.css" />
+
+    <!-- Google Ads -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2603912794242628"
+      crossorigin="anonymous"
+    ></script>
+
+  </head>
+
+  <body>
+    <div class="language-selector">
+        <div class="dropdown" id="languageDropdown">
+          <div class="selected">
+            <img id="selectedFlag" src="imagens/flags/pt.png" alt="Pt-BR" />
+            <img class="arrow" src="imagens/flags/arrow.png" alt="Abrir menu" />
+          </div>
+          <div class="dropdown-options">
+            <div class="option" data-lang="en">
+              <img src="imagens/flags/en.png" alt="English" />
+              <span>English</span>
             </div>
+            <div class="option" data-lang="pt">
+              <img src="imagens/flags/pt.png" alt="Português" />
+              <span>Português</span>
+            </div>
+          </div>
         </div>
-        <div class="language-selector">
-            <a href="#" title="English">
-                <img src="icones/flag-en.png" alt="English">
-            </a>
-            <a href="#" title="Português">
-                <img src="icones/flag-pt.png" alt="Português">
-            </a>
-        </div>
-        <center>
-            <input type="text" id="searchInput" onkeyup="searchperguntas()" placeholder="Pesquisar perguntas...">
-        </center>
-        <div id="faq" class="faq"></div>
-    </div>
-    <footer>
-        <p id="footerText">&copy; 2024 Desenvolvido por JalisonBR</p>
-        <p><a href="https://discord.gg/6aAeDSbr6D" class="contact-button">Entre em Contato</a></p>
-    </footer>
-    <script src="script.js"></script>
-</body>
+      </div>
+      
+    <div class="container">
+      <div class="header">
+        <h1 id="pageTitle">Perguntas / Respostas Hacker Wars</h1>
 
+        <div class="navbar">
+          <div
+            class="menu-toggle"
+            onclick="toggleMenu()"
+            aria-label="Abrir menu de navegação"
+          >
+            ☰
+          </div>
+          <nav id="nav-links" role="navigation" aria-label="Menu principal">
+            <a href="index.html" title="Página Inicial">Início</a>
+            <a href="sobre.html" title="Sobre o site">Sobre</a>
+            <a href="contato.html" title="Fale conosco">Contato</a>
+            <a href="privacidade.html" title="Política de privacidade"
+              >Privacidade</a
+            >
+          </nav>
+        </div>
+
+        <div class="social-icons">
+            <a
+            href="https://hackerwars.io/"
+            target="_blank"
+            rel="noopener"
+            title="Site Hacker Wars"
+          >
+            <img src="imagens/favicon-hacker-wars.png" alt="Hacker Wars" class="social-flag" />
+          </a>
+          <a
+            href="https://jalisonbr.com/"
+            target="_blank"
+            rel="noopener"
+            title="Site JalisonBR"
+            ><i class="fa-solid fa-globe"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/@JalisonBR"
+            target="_blank"
+            rel="noopener"
+            title="Canal YouTube"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a
+            href="https://instagram.com/jalison_sousa1"
+            target="_blank"
+            rel="noopener"
+            title="Instagram"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            href="https://github.com/jalisonsousa"
+            target="_blank"
+            rel="noopener"
+            title="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </div>
+      </div>
+
+      <center>
+        <input
+          type="text"
+          id="searchInput"
+          onkeyup="searchperguntas()"
+          placeholder="Pesquisar perguntas..."
+          aria-label="Pesquisar perguntas"
+        />
+      </center>
+      
+      <div
+        id="faq"
+        class="faq"
+        aria-label="Lista de perguntas e respostas"
+      ></div>
+    </div>
+
+    <footer>
+      <p id="footerText">&copy; 2025 Desenvolvido por JalisonBR</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/lang.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/toggleMenu.js"></script>
+  </body>
 </html>

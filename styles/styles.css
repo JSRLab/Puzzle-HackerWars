@@ -1,0 +1,393 @@
+/* Estilos Gerais */
+body {
+  background-color: #000; /* Fundo preto para o tema hacker */
+  color: #00ff00; /* Texto verde para o tema hacker */
+  font-family: 'Courier New', Courier, monospace; /* Fonte estilo terminal */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%; /* Aumenta a largura do container em telas menores */
+  max-width: 1200px; /* Limita a largura máxima do container */
+  margin: 20px auto;
+  text-align: center;
+  position: relative; /* Necessário para o posicionamento dos ícones */
+}
+
+/* Header */
+.header {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  word-wrap: break-word; /* Quebra o texto longo */
+}
+
+/* Redes Sociais */
+.social-icons {
+  display: flex;
+  justify-content: center; /* Centraliza os ícones horizontalmente */
+  flex-wrap: wrap; /* Permite que os ícones se movam para a linha seguinte em telas menores */
+  gap: 10px; /* Espaço entre os ícones */
+  margin-top: 20px; /* Espaço acima dos ícones */
+}
+
+.social-icons a {
+  color: #00ff00; /* Cor dos ícones */
+  font-size: 24px; /* Tamanho dos ícones */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  transition: color 0.3s, transform 0.3s; /* Transição suave para o hover */
+}
+
+.social-icons a:hover {
+  color: #00cc00; /* Cor dos ícones ao passar o mouse */
+  transform: scale(1.1); /* Aumenta o tamanho dos ícones */
+}
+
+/* Responsividade para ícones */
+@media (max-width: 600px) {
+  .social-icons a {
+      font-size: 20px; /* Reduz o tamanho dos ícones em telas menores */
+  }
+  .header h1 {
+      font-size: 1.5em; /* Reduz o tamanho do título em telas menores */
+  }
+}
+
+@media (max-width: 400px) {
+  .social-icons a {
+      font-size: 18px; /* Reduz ainda mais o tamanho dos ícones em telas muito pequenas */
+  }
+  .header h1 {
+      font-size: 1.2em; /* Reduz ainda mais o tamanho do título */
+  }
+}
+
+/* FAQ */
+.faq {
+  margin-top: 20px;
+}
+
+.pergunta {
+  background-color: #111; /* Fundo escuro para contraste */
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #00ff00;
+  text-align: left;
+  transition: background-color 0.3s, border-color 0.3s; /* Transição suave para hover */
+  word-wrap: break-word; /* Quebra o texto longo */
+}
+
+.pergunta h3 {
+  margin: 0;
+  font-size: 1.1em; /* Ajusta o tamanho da fonte das perguntas */
+}
+
+.resposta {
+  margin-top: 10px;
+  padding-left: 20px;
+  font-size: 1em; /* Ajusta o tamanho da fonte das respostas */
+}
+
+/* Campo de Pesquisa */
+#searchInput {
+  padding: 10px;
+  margin: 25px 0;
+  border: 1px solid #00ff00;
+  border-radius: 5px;
+  background-color: #111; /* Fundo escuro */
+  color: #00ff00; /* Texto verde */
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%; /* Ocupa toda a largura do container em telas menores */
+  box-sizing: border-box; /* Inclui padding e border no tamanho total */
+  text-align: center;
+}
+
+/* Rodapé */
+footer {
+  background-color: #000; /* Fundo escuro para o rodapé */
+  color: #00ff00; /* Texto verde */
+  padding: 30px 0; /* Aumenta o padding para adicionar mais espaço */
+  text-align: center;
+  border-top: 1px solid #00ff00;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 20px 0; /* Adiciona mais espaço entre os elementos do rodapé */
+  word-break: break-word; /* Quebra palavras longas */
+  overflow-wrap: break-word; /* Quebra palavras longas e evita que o texto ultrapasse o contêiner */
+}
+
+/* Botão de Contato */
+.contact-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1aff1a;
+  color: #111;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact-button:hover {
+  background-color: #222;
+  color: #1aff1a;
+}
+
+/* Seletor de Idioma */
+.language-selector {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  position: relative;
+  background-color: #000000bd;
+  border: 2px solid #1aff1a;
+  border-radius: 4px;
+  padding: 5px 8px;
+  cursor: pointer;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.selected {
+  display: flex;
+  align-items: center;
+}
+
+.selected img {
+  width: 16px;
+  height: 16px;
+}
+
+.arrow {
+  margin-left: 5px;
+  color: #1aff1a;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #000000bd;
+  border: 2px solid #1aff1a;
+  border-radius: 4px;
+  margin-top: 4px;
+  display: none;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.dropdown.open .dropdown-options {
+  display: flex;
+}
+
+.dropdown-options .option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px;
+  cursor: pointer;
+  color: #1aff1a;
+  font-weight: bold;
+}
+
+.dropdown-options .option:hover {
+  background-color: #1aff1a33;
+}
+
+.dropdown-options img {
+  width: 16px;
+  height: 16px;
+}
+
+
+/* Títulos */
+#pageTitle, #aboutTitle, #contactTitle, #privacyPolicyTitle {
+  text-align: center;
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  #pageTitle, #aboutTitle, #contactTitle, #privacyPolicyTitle {
+      margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #pageTitle, #aboutTitle, #contactTitle, #privacyPolicyTitle {
+      margin-top: 50px;
+  }
+}
+
+/* Menu Hambúrguer */
+.navbar {
+  background-color: #000;
+  padding: 10px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: #1aff1a;
+  cursor: pointer;
+  text-align: right;
+  padding-right: 15px;
+}
+
+nav#nav-links {
+  text-align: center;
+}
+
+nav#nav-links a {
+  font-family: monospace;
+  color: #1aff1a;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+nav#nav-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .menu-toggle {
+      display: block;
+  }
+  nav#nav-links {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+  }
+  nav#nav-links a {
+      display: block;
+      margin: 10px 0;
+  }
+  nav#nav-links.active {
+      display: flex;
+  }
+}
+
+/* Página Sobre */
+.sobre {
+  padding: 20px;
+  background-color: #111;
+  color: white;
+}
+
+.sobre h2 {
+  font-size: 2em;
+  color: #1aff1a;
+}
+
+.sobre img.img-about {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  height: auto;
+  border: 3px solid #1aff1a;
+  margin-top: 20px;
+}
+
+.sobre .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1aff1a;
+  color: #111;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.sobre .btn:hover {
+  background-color: #222;
+  color: #1aff1a;
+}
+
+@media (max-width: 768px) {
+  .sobre h2 {
+      font-size: 1.5em;
+  }
+
+  .sobre .btn {
+      width: 50%;
+      text-align: center;
+  }
+
+  .sobre img.img-about {
+      max-width: 90%;
+  }
+}
+
+/* Página Contato */
+main {
+  padding: 20px;
+  background-color: #111;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  main {
+      padding: 15px;
+      font-size: 16px;
+  }
+  .contact-button {
+      width: 50%;
+      text-align: center;
+  }
+}
+
+/* Página Privacidade */
+.privacidade {
+  padding: 20px;
+  background-color: #111;
+  color: white;
+}
+
+.privacidade h2 {
+  font-size: 2em;
+  color: #1aff1a;
+}
+
+.privacidade .btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #1aff1a;
+  color: #111;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.privacidade .btn:hover {
+  background-color: #222;
+  color: #1aff1a;
+}
+
+@media (max-width: 768px) {
+  .privacidade h2 {
+      font-size: 1.5em;
+  }
+
+  .privacidade .btn {
+      width: 50%;
+  }
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sobre - Puzzle HackerWars</title>
+  <meta name="description" content="Página sobre o Puzzle HackerWars. Conheça o objetivo do site e os desenvolvedores.">
+  <meta name="keywords" content="Hacker Wars, sobre, quem somos, puzzle, desenvolvedores, ajuda, enigmas">
+  <meta name="author" content="Jalisonsousa">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="Portuguese">
+
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="icon" href="imagens/icone.png" type="image/png">
+  <!-- Google Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2603912794242628"
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="language-selector">
+    <div class="dropdown" id="languageDropdown">
+      <div class="selected">
+        <img id="selectedFlag" src="imagens/flags/pt.png" alt="Pt-BR" />
+        <img class="arrow" src="imagens/flags/arrow.png" alt="Abrir menu" />
+      </div>
+      <div class="dropdown-options">
+        <div class="option" data-lang="en">
+          <img src="imagens/flags/en.png" alt="English" />
+          <span>English</span>
+        </div>
+        <div class="option" data-lang="pt">
+          <img src="imagens/flags/pt.png" alt="Português" />
+          <span>Português</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <h2 id="aboutTitle">Sobre Nós</h2>
+    <div class="navbar">
+      <div class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu de navegação">☰</div>
+      <nav id="nav-links" role="navigation" aria-label="Menu principal">
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+        <a href="privacidade.html">Privacidade</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="sobre" aria-label="Informações sobre o site e desenvolvedores">
+      <img src="imagens/puzzle-exemplo.png" alt="Imagem ilustrativa do jogo HackerWars" class="img-about">
+
+      <p id="aboutText1">
+        O Puzzle HackerWars foi criado para ajudar jogadores do jogo Hacker Wars a encontrar respostas rápidas e confiáveis para os puzzles e desafios do jogo.
+      </p>
+      <p id="aboutText2">
+        Nosso objetivo é organizar as respostas de maneira prática e fácil de acessar, com um design simples e eficaz.
+      </p>
+
+      <h3 id="whoWeAreTitle">Quem Somos</h3>
+      <p id="whoWeAreText">
+        Este site foi desenvolvido por <strong>Jalisonsousa</strong>, como parte de um projeto educativo e open-source, com o intuito de ajudar jogadores de todo o mundo.
+      </p>
+
+      <h3 id="whyThisSiteTitle">Por que Criamos este Site?</h3>
+      <p id="whyThisSiteText">
+        A ideia surgiu para auxiliar os jogadores a se orientarem nos desafios do Hacker Wars, sem perder tempo procurando soluções em fóruns ou outros sites. Aqui, você encontra as respostas de forma rápida e eficiente.
+      </p>
+
+      <a href="index.html" class="btn" id="backToHome" title="Voltar à página inicial">Voltar para Início</a>
+    </section>
+  </main>
+
+  <footer>
+    <p id="footerText">&copy; 2025 Desenvolvido por JalisonBR</p>
+  </footer>
+
+  <script src="scripts/lang.js"></script>
+  <script src="scripts/toggleMenu.js"></script>
+</body>
+
+</html>

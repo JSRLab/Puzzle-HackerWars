@@ -1,0 +1,34 @@
+{
+    "title": "Hacker Wars FAQ",
+    "pageTitle": "Hacker Wars FAQ",
+    "searchPlaceholder": "Search questions...",
+    "footerText": "&copy; 2025 Developed by JalisonBR",
+    "contactButton": "Contact Us",
+    "backToHome": "Return to Home",
+  
+    "aboutTitle": "About Us",
+    "aboutText1": "The HackerWars Puzzle was created to help players of the Hacker Wars game find quick and reliable answers to the puzzles and challenges of the game.",
+    "aboutText2": "Our goal is to organize the answers in a practical and easy-to-access way, with a simple and effective design.",
+    "whoWeAreTitle": "Who We Are",
+    "whoWeAreText": "This site was developed by <strong>Jalisonsousa</strong>, as part of an educational open-source project, aimed at helping players worldwide.",
+    "whyThisSiteTitle": "Why We Created This Site?",
+    "whyThisSiteText": "The idea came to help players navigate the Hacker Wars challenges without wasting time searching for solutions in forums or other sites. Here, you find answers quickly and efficiently.",
+  
+    "contactTitle": "Contact",
+    "contactText": "For questions or suggestions, send me a message",
+    
+    "privacyPolicyTitle": "Privacy Policy",
+    "privacyPolicyText1": "This privacy policy describes how we collect and use your information.",
+    "privacyPolicyText2": "Data Collection",
+    "privacyPolicyText3": "When you use our site, we collect technical information, such as browsing data and cookies, to improve your experience.",
+    "cookiesTitle": "Cookies",
+    "cookiesText": "This site may use cookies to provide personalized ads. You can disable cookies in your browser if you wish.",
+  
+    "navbar": {
+      "home": "Home",
+      "about": "About",
+      "contact": "Contact",
+      "privacy": "Privacy"
+    }
+  }
+  
